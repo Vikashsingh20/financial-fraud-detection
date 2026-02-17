@@ -39,7 +39,7 @@ Performed detailed EDA including:
 
 ### 📌 Correlation Matrix
 
-![Correlation Matrix]<img src="images/correlation_matrix.png" widhth="600">
+![Correlation Matrix]<img src="images/correlation_matrix.png" width="600">
 
 ### 📌 Fraud Distribution by Transaction Type
 
