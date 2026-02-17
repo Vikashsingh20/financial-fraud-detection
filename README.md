@@ -147,6 +147,20 @@ Joblib
 ✔ Add SHAP explainability
 ✔ Improve fraud precision
 
+
+
+
+## 📂 Dataset
+
+The dataset contains over 6.3 million financial transactions.
+
+Due to its large size, it is not included in this repository.
+
+You can download the dataset from the original source (https://www.kaggle.com/datasets/amanalisiddiqui/fraud-detection-dataset).
+
+
+
+
 👨‍💻 Author
 git
 Vikash Singh
