@@ -39,11 +39,11 @@ Performed detailed EDA including:
 
 ### 📌 Correlation Matrix
 
-![Correlation Matrix](images/correlation_matrix.png)
+![Correlation Matrix]<img src="images/correlation_matrix.png" widhth="600">
 
 ### 📌 Fraud Distribution by Transaction Type
 
-![Fraud Count](images/fraud_count.png)
+![Fraud Count]<img src="images/fraud_count.png" width="600">
 
 ---
 
@@ -90,7 +90,7 @@ An interactive web app where users can:
 
 ### App Screenshot
 
-![App Screenshot](images/app_screenshot.png)
+![App Screenshot]<img src="images/app_screenshot.png" width="600">
 
 ---
 
@@ -148,7 +148,7 @@ Joblib
 ✔ Improve fraud precision
 
 👨‍💻 Author
-
+git
 Vikash Singh
 Machine Learning Enthusiast
 India 🇮🇳
