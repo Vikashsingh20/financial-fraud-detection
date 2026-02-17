@@ -1,4 +1,4 @@
-# 💳 Fraud Detection System using Machine Learning & Streamlit
+# 💳 Large-Scale Fraud Detection System (6.3M Transactions) using Random Forest & Streamlit
 
 ## 📌 Project Overview
 
@@ -47,37 +47,51 @@ Performed detailed EDA including:
 
 ---
 
+
 ## ⚙️ Machine Learning Pipeline
 
-Used **Scikit-learn Pipeline** with:
+Built using Scikit-learn Pipeline with:
 
-- `ColumnTransformer`
-- `StandardScaler` (for numerical features)
-- `OneHotEncoder` (for categorical features)
-- `LogisticRegression (class_weight="balanced")`
+- ColumnTransformer
+- OneHotEncoder (for transaction type)
+- RandomForestClassifier (n_estimators=100, max_depth=10)
 
-### Why class_weight="balanced"?
-Because the dataset is highly imbalanced and fraud cases are rare.
+Why Random Forest?
+
+- Handles non-linear patterns
+- Robust to outliers
+- Works well on large datasets
+- No scaling required
 
 ---
 
 ## 📈 Model Performance
-Accuracy: 94.67%
-
+Accuracy = 99.96%
 
 
 ### Classification Report:
 
 | Class | Precision | Recall | F1-Score |
 |-------|-----------|--------|----------|
-| Non-Fraud (0) | 1.00 | 0.95 | 0.97 |
-| Fraud (1) | 0.02 | 0.94 | 0.04 |
+| Non-Fraud (0) | 1.00 | 1.00 | 1.00 |
+| Fraud (1) | 0.99 | 0.72 | 0.83 |
 
 ### Confusion Matrix:
-[[1804823 101499]
-[ 151 2313]]
+
+[[1906300, 22],
+ [690, 1774]]
+
+### Key Business Insight
+
+- Only 22 false positives out of 1.9M transactions
+- 99% precision on fraud detection
+- Successfully detected 72% of fraud cases
+- Extremely low false alarm rate
 
 
+### ROC-AUC Score
+
+The model achieved a high ROC-AUC score, demonstrating strong ability to separate fraudulent and legitimate transactions even under severe class imbalance (~0.13% fraud rate).
 
 ## 🖥️ Streamlit Web Application
 
@@ -130,23 +144,40 @@ Joblib
 ├── fraud_detection_model.pkl
 ├── requirements.txt
 └── README.md
+
+
 🔥 Key Highlights
 
-✔ Large-scale dataset (6.3M+ rows)
-✔ Real-world imbalanced classification problem
-✔ End-to-end ML pipeline
-✔ Model serialization using joblib
-✔ Deployed interactive web app
-✔ Clean modular workflow
+✔ Trained on 6.3M+ real-world transactions  
+✔ Severe class imbalance (0.13% fraud) handled effectively  
+✔ Achieved 99% precision on fraud detection  
+✔ Only 22 false positives out of 1.9M test transactions  
+✔ End-to-end ML pipeline  
+✔ Model serialized using joblib  
+✔ Interactive Streamlit web application  
+✔ Production-ready evaluation metrics  
+
+
 
 
 📌 Future Improvements
-✔ Add advanced models (XGBoost, Random Forest)
-✔ Add probability score display
-✔ Deploy on Streamlit Cloud
-✔ Add SHAP explainability
-✔ Improve fraud precision
 
+✔ Threshold tuning for higher recall  
+✔ Add XGBoost / LightGBM comparison  
+✔ Add Precision-Recall curve visualization  
+✔ Deploy on Streamlit Cloud / AWS  
+✔ Add SHAP model explainability  
+✔ Add real-time API using Flask/FastAPI  
+
+
+
+## 🧠 Technical Challenges Solved
+
+- Handled large-scale dataset (6.3M rows, 534MB memory usage)
+- Managed extreme class imbalance (0.13% fraud)
+- Reduced false positives to near zero
+- Optimized training on Mac M2 using parallel processing (n_jobs=-1)
+- Built scalable ML pipeline using ColumnTransformer
 
 
 
