@@ -91,7 +91,11 @@ Accuracy = 99.96%
 
 ### ROC-AUC Score
 
-The model achieved a high ROC-AUC score, demonstrating strong ability to separate fraudulent and legitimate transactions even under severe class imbalance (~0.13% fraud rate).
+The Random Forest model achieved a ROC-AUC score of **0.998**, indicating near-perfect ability to distinguish between fraudulent and legitimate transactions despite extreme class imbalance (0.13% fraud rate).
+
+### ROC curve
+![ROC_curve]<img src="images/ROC_curve.png" width="600">
+ 
 
 ## 🖥️ Streamlit Web Application
 
